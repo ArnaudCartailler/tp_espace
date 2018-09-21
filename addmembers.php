@@ -13,7 +13,7 @@
     }
 
 
-  if (isset($_POST['email'])){
+  if (isset($_POST['email']) AND isset($_POST['pseudo'])){
 
       $_POST['email'] = htmlspecialchars($_POST['email']);
 
@@ -26,14 +26,11 @@
 
       $array = $req->fetch();
 
-      // foreach($array as $diff){
-      //   if('pseudo' != $_POST['pseudo']){
-      //     $diff === true;
-      //   }
-      // }
+      if($POST['pass'] == $_POST['pass2']){
+        $diff == false;
+      }
 
-      if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email']) AND ($array['pseudo'] != $_POST['pseudo']))
-            {
+        if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email']) AND ($array['pseudo'] != $_POST['pseudo']) AND $diff == false){
 
               $pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 

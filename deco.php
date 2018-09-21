@@ -2,7 +2,7 @@
 
 session_start();
 
-echo 'Vous êtes déconnecté' . $_SESSION['pseudo'];
+echo 'Vous êtes déconnecté ' . $_SESSION['pseudo'];
 
 $_SESSION = array();
 

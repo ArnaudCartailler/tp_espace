@@ -7,6 +7,9 @@
                           <p>Veuillez taper votre mot de passe:</p>
                             <input type="password" name="pass" />
 
+                            <p>Veuillez confirmer votre mot de passe:</p>
+                              <input type="password" name="pass2" />
+
                             <p>Veuillez taper votre email:</p>
                               <input type="email" name="email" />
 
