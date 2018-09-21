@@ -23,7 +23,7 @@
 
 <div class="container-fluid">
 
-  <div class ="row">
+  <div class ="row text-center">
 
       <div class="col-md-4 disconnect">
         <a href="deco.php">Se déconnecter</a>

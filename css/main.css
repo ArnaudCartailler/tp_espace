@@ -97,13 +97,30 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+  .container-fluid .row{
+    background-color: lightgrey;
+    padding: 10px 0px 10px 0px;
+  }
 
+  .container-fluid .row a{
+    padding: 5px 5px 5px 5px;
+    color : black;
+  }
 
+  .container-fluid .row a:hover{
+    color : red;
+    border : 1px solid red;
+    border-radius: 8px;
+    text-decoration: none;
+    transition : 0.6s;
+  }
 
-
-
-
-
+  .welcome p{
+    width:100%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+  }
 
 
 

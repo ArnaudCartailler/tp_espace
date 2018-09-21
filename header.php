@@ -23,20 +23,24 @@
 
 <div class="container-fluid">
 
-  <div class ="row">
+  <div class ="row text-center">
 
-      <div class="col-md-2 signin">
+      <div class="col-md-4 signin">
         <a href="formmembers.php">S'inscrire</a>
       </div>
 
-      <div class="col-md-3 connexion">
+      <div class="col-md-4 connexion">
         <a href="connexion.php">Se connecter</a>
       </div>
 
-      <div class="col-md-2 blog">
+      <div class="col-md-4 blog">
         <a href="blog.php">Le blog</a>
       </div>
 
   </div>
 
+</div>
+
+<div class="welcome">
+  <p> Bienvenue ! </p>
 </div>
