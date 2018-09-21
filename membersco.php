@@ -32,7 +32,7 @@ if($isPasswordCorrect){
   $_SESSION['pseudo'] = $_POST['pseudo'];
 
   echo "redirection";
-  header('Refresh:2; URL=index.php');
+  header('Refresh:2; URL=index0.php');
 
 } else {
 

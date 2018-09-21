@@ -1,13 +1,7 @@
 
-<?php
+<h1>blog</h1>
 
-session_start();
+<?php include('header.php') ?>
 
-if ($_SESSION['pseudo'])
-{
-    echo 'Bienvenue sur le blog ' . $_SESSION['pseudo'];
-}
 
-?>
-
-<p>blog</p>
+<?php include('footer.php') ?>
