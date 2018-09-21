@@ -42,14 +42,31 @@
 
               $stmt->execute();
 
-                   echo 'Vous êtes inscrit';
+              ?>
+
+
+                  <div class="redirection">
+                      <p> Direction la connexion ! </p>
+                  </div>
+
+
+              <?php
+
                   header('Refresh:1; URL=connexion.php');
                   unset($bdd);
                }
 
                else{
 
-                  echo 'Saisie incorrect, veuillez recommencer';
+                 ?>
+
+
+                     <div class="redirection">
+                         <p> Saisie incorrecte, veuillez recommencer ! </p>
+                     </div>
+
+
+                 <?php
                   header('Refresh:2; URL=formmembers.php');
 
                }

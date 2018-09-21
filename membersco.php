@@ -1,3 +1,4 @@
+<?php include('header0.php') ?>
 
 <?php
 
@@ -31,7 +32,15 @@ if($isPasswordCorrect){
 
   $_SESSION['pseudo'] = $_POST['pseudo'];
 
-  echo "redirection";
+?>
+
+
+    <div class="redirection">
+        <p> Retour à l'accueil ! </p>
+    </div>
+
+
+<?php
   header('Refresh:2; URL=index0.php');
 
 } else {
@@ -41,3 +50,5 @@ if($isPasswordCorrect){
 }
 
 ?>
+
+<?php include('footer.php') ?>

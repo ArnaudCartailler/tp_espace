@@ -1,10 +1,56 @@
+<!doctype html>
+<html class="no-js" lang="fr">
 
-<form action="membersco.php" method="post">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Espace_TP</title>
+  <meta name="description" content="TP_membre">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" placeholder="pseudo"/>
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-  <input type="password" name="pass" value="pass" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
 
-  <input type="submit"name="valid" value="Send" />
+<body>
+
+<div class="container-fluid">
+
+  <div class ="row text-center">
+
+      <div class="col-md-4 signin">
+        <a href="formmembers.php">S'inscrire</a>
+      </div>
+
+      <div class="col-md-4 connexion">
+        <a href="connexion.php">Se connecter</a>
+      </div>
+
+      <div class="col-md-4 blog">
+        <a href="blog.php">Le blog</a>
+      </div>
+
+  </div>
+
+</div>
+
+<form class="connect" action="membersco.php" method="post">
+
+  <p>Veuillez taper votre pseudo:</p>
+  <input type="text" name="pseudo" placeholder="pseudo"/>
+
+    <p>Veuillez taper votre mot de passe:</p>
+    <input type="password" name="pass" />
+
+  <input class="sub" type="submit"name="valid" value="Send"/>
 
 </form>
+
+<?php include('footer.php') ?>

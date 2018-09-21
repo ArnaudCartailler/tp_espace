@@ -97,6 +97,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*header*/
   .container-fluid .row{
     background-color: lightgrey;
     padding: 10px 0px 10px 0px;
@@ -115,6 +116,8 @@ textarea {
     transition : 0.6s;
   }
 
+  /*Message welcome*/
+
   .welcome p{
     width:100%;
     margin-top: 50px;
@@ -122,14 +125,61 @@ textarea {
     font-size: 30px;
   }
 
+/*redirection btw pages*/
 
+  .redirection p{
+    width:100%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+  }
 
+/*Form sign in*/
 
+form {
+  border : 1px solid lightgrey;
+  width : 30%;
+  margin : auto;
+  margin-top: 5px;
+  padding: 15px 15px 15px 15px;
+}
 
+form .title{
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+}
 
+form p{
+  text-align:justify;
+  text-decoration: underline;
+}
 
+form input{
+  margin-bottom: 20px;
+  border : 2px solid lightgrey;
+  padding: 10px 10px 10px 10px;
+}
 
+form input:focus{
+  margin-bottom: 20px;
+  border : 2px solid grey;
+  padding: 10px 10px 10px 10px;
+  background-color: lightgrey;
+}
 
+form .sub{
+  background-color: lightgrey;
+}
+
+form .sub:hover{
+  border : 1px solid grey;
+}
+
+form .connect{
+  width : 50%;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
