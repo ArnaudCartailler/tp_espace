@@ -6,10 +6,10 @@
                     <input type="text" name="pseudo" />
 
                     <p>Veuillez taper votre ancien mot de passe:</p>
-                      <input type="password" name="pass" />
+                      <input type="password" name="pass1" />
 
                   <p>Veuillez taper votre nouveau mot de passe:</p>
-                    <input type="password" name="pass2" />
+                    <input type="password" name="pass" />
 
                     <p>Veuillez confirmer votre nouveau mot de passe:</p>
                       <input type="password" name="pass3" />

@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 try{
 
 $bdd = new PDO('mysql:host=localhost;dbname=tp_members;charset=utf8', 'root', 'soleil1993');
@@ -11,61 +13,63 @@ catch(Exception $e){
       die('Erreur : '.$e->getMessage());
 }
 
-if (isset($_POST['pseudo'])){
-
-    $req = $bdd->prepare('SELECT pseudo, pass FROM members WHERE pseudo = :pseudo, pass = :pass');
-
-
-    $req->execute(array(
-      'pseudo' => $_POST['pseudo']
-      'pass' => $_POST['pass1']
-    ));
-
-
-    $array = $req->fetchAll();
 
     if($_POST['pseudo'] != $_SESSION['pseudo']){
 
-      $diffPseudo == true;
-      echo 'Saisie incorrect, veuillez recommencer';
-      header('Refresh:2; URL=changeprofil.php');
+      $diffPseudo = true;
+      echo 'a';
 
     }
 
-    if($POST['pass1'] == $_POST['pass2']){
+    if($POST['pass1'] != $_POST['pass']){
+      echo 'b';
 
-      echo 'C\'est le même mdp, changement refusé';
-      header('Refresh:2; URL=changeprofil.php');
-
+      $diffOldPass = true;
     }
 
-    if($POST['pass2'] == $_POST['pass3']){
+    if($_POST['pass'] == $_POST['pass3']){
+      echo 'c';
 
-      $diffPass == false;
+      $diffPass = true;
 
     }
+var_dump($diffPass);
 
-      if ( $diffPseudo == false AND $diffPass == false){
+      if ( $diffPseudo AND $diffPass AND $diffOldPass){
 
-            $pass_hache = password_hash($_POST['pass2'], PASSWORD_DEFAULT);
+          $pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
-            $stmt = $bdd->prepare("UPDATE members SET pseudo = :pseudo, $pass_hache = :pass");
+          $req = $bdd->prepare('SELECT * FROM members WHERE pseudo = :pseudo');
 
-            $stmt->bindParam(':pseudo', $_POST['pseudo']);
-            $stmt->bindParam(':pass', $pass_hache);
+          $req->execute(array(
+            'pseudo' => $_SESSION['pseudo'],
+            'pass' => $_POST['pass']
+          ));
 
-            $stmt->execute();
+          $received = $req->fetch();
 
-                 echo 'Changement effectué';
-                header('Refresh:1; URL=connexion.php');
-                unset($bdd);
-             }
+           $req->closeCursor();
+
+          if(!empty($_POST['pseudo'])){
+echo "z";
+              $req = $bdd->prepare('UPDATE members SET pseudo = :pseudo, pass = :pass WHERE pseudo = :oldpseudo');
+              $req->execute(array(
+              'pseudo' => $_POST['pseudo'],
+              'pass' => $pass_hache,
+              'oldpseudo' => $_SESSION['pseudo']
+              ));
+
+                  echo 'Changement effectué';
+                  header('Refresh:1; URL=connexion.php');
+                  unset($bdd);
+
+        }
 
              else{
 
-                echo 'Saisie incorrect, veuillez recommencer';
+                echo 'Incorrect';
                 header('Refresh:2; URL=changeprofil.php');
 
-             }
+          }
 
 }
