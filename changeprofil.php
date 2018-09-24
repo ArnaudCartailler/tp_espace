@@ -36,6 +36,8 @@ catch(Exception $e){
 var_dump($diffPass);
 
       if ( $diffPseudo AND $diffPass AND $diffOldPass){
+        
+        $_POST['pseudo'] = htmlspecialchars($_POST['pseudo'])
 
           $pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 

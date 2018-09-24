@@ -16,6 +16,7 @@
   if (isset($_POST['email']) AND isset($_POST['pseudo'])){
 
       $_POST['email'] = htmlspecialchars($_POST['email']);
+      $_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
 
       $req = $bdd->prepare('SELECT pseudo FROM members WHERE pseudo = :pseudo');
 

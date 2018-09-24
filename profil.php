@@ -3,16 +3,16 @@
 <form action="changeprofil.php" method="post" enctype="multipart/form-data">
 
                   <p>Changer votre pseudo:</p>
-                    <input type="text" name="pseudo" />
+                    <inputtype="text" name="pseudo" required />
 
                     <p>Veuillez taper votre ancien mot de passe:</p>
-                      <input type="password" name="pass1" />
+                      <input type="password" name="pass1" required />
 
                   <p>Veuillez taper votre nouveau mot de passe:</p>
-                    <input type="password" name="pass" />
+                    <input type="password" name="pass" required />
 
                     <p>Veuillez confirmer votre nouveau mot de passe:</p>
-                      <input type="password" name="pass3" />
+                      <input type="password" name="pass3" required />
 
                     <p>Valider :</p>
                       <input type="submit" name="valid" value="Valider" />
